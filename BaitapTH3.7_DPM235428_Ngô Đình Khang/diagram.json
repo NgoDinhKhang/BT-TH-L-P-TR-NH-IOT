@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Maverick",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 25.8, "left": -102.8, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 259.8, "left": 57, "attrs": {} },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip1",
+      "top": -84.3,
+      "left": 96,
+      "attrs": { "pixels": "8" }
+    }
+  ],
+  "connections": [
+    [ "strip1:VDD", "bb1:8t.a", "green", [ "h0" ] ],
+    [ "bb1:8t.e", "uno:5V", "green", [ "v412.8", "h230.4", "v-67.1" ] ],
+    [ "strip1:DIN", "bb1:13t.a", "red", [ "h0" ] ],
+    [ "bb1:13t.e", "uno:12", "red", [ "v134.4", "h153.6" ] ],
+    [ "strip1:VSS", "bb1:17t.a", "black", [ "h-19.2", "v56.8" ] ],
+    [ "bb1:17t.e", "uno:GND.1", "black", [ "v124.8", "h96" ] ]
+  ],
+  "dependencies": {}
+}
