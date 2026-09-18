@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Maverick",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard",
+      "id": "bb1",
+      "top": 5,
+      "left": -274.4,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -57, "left": 239.4, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -247.2,
+      "left": -180.6,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -262.8,
+      "left": -101.8,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": -14.8, "left": -208.1, "attrs": {} }
+  ],
+  "connections": [
+    [ "sw1:1", "bb1:39b.j", "green", [ "v0" ] ],
+    [ "bb1:39b.f", "uno:5V", "green", [ "h0" ] ],
+    [ "sw1:2", "bb1:38b.j", "blue", [ "v0" ] ],
+    [ "sw1:3", "bb1:37b.j", "black", [ "v0" ] ],
+    [ "bb1:38b.f", "uno:4", "blue", [ "h182.4", "v-259.2", "h240" ] ],
+    [ "bb1:37b.f", "uno:GND.1", "black", [ "h163.2", "v-278.4", "h153.6" ] ],
+    [ "bz1:2", "bb1:7b.j", "red", [ "v0" ] ],
+    [ "bb1:7b.f", "uno:8", "red", [ "h364.8" ] ],
+    [ "bz1:1", "bb1:13b.j", "black", [ "v0" ] ],
+    [ "bb1:13b.f", "uno:GND.1", "black", [ "h316.8" ] ],
+    [ "led1:A", "bb1:3b.j", "orange", [ "v0" ] ],
+    [ "bb1:3b.f", "uno:7", "orange", [ "h0" ] ],
+    [ "led1:C", "bb1:6b.j", "black", [ "v0" ] ],
+    [ "bb1:6b.f", "uno:GND.1", "black", [ "h316.8" ] ]
+  ],
+  "dependencies": {}
+}

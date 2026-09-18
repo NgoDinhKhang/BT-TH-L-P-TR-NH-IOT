@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Maverick",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -137.4, "left": -198.8, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 317.4, "left": -19.8, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -284.57, "left": -32, "attrs": {} }
+  ],
+  "connections": [
+    [ "lcd1:VSS", "bb1:19t.a", "black", [ "v0" ] ],
+    [ "bb1:19t.e", "uno:GND.1", "black", [ "v288", "h95.7" ] ],
+    [ "lcd1:VDD", "bb1:20t.a", "#8f4814", [ "v0" ] ],
+    [ "bb1:20t.e", "uno:5V", "#8f4814", [ "v182.4", "h-86.4", "v441.6", "h217" ] ],
+    [ "lcd1:V0", "bb1:21t.a", "red", [ "v0" ] ],
+    [ "bb1:21t.e", "uno:GND.2", "red", [ "v163.2", "h-115.2", "v489.6", "h245.7" ] ],
+    [ "lcd1:A", "bb1:33t.a", "yellow", [ "v0" ] ],
+    [ "bb1:33t.e", "uno:5V", "yellow", [ "v192", "h182.4", "v432", "h-176.6" ] ],
+    [ "lcd1:K", "bb1:34t.a", "cyan", [ "v0" ] ],
+    [ "bb1:34t.e", "uno:GND.3", "cyan", [ "v163.2", "h201.6", "v489.6", "h-186.4" ] ],
+    [ "lcd1:RS", "bb1:22t.a", "orange", [ "v0" ] ],
+    [ "bb1:22t.e", "uno:12", "orange", [ "v336", "h85.9" ] ],
+    [ "lcd1:RW", "bb1:23t.a", "gold", [ "v0" ] ],
+    [ "bb1:23t.e", "uno:GND.1", "gold", [ "v307.2", "h57.3" ] ],
+    [ "lcd1:E", "bb1:24t.a", "green", [ "v86.4" ] ],
+    [ "bb1:24t.e", "uno:11", "green", [ "v326.4", "h76.2" ] ],
+    [ "lcd1:D4", "bb1:29t.a", "blue", [ "v0" ] ],
+    [ "bb1:29t.e", "uno:5", "blue", [ "v268.8", "h92.2" ] ],
+    [ "lcd1:D5", "bb1:30t.a", "violet", [ "v0" ] ],
+    [ "bb1:30t.e", "uno:4", "violet", [ "v259.2", "h96" ] ],
+    [ "lcd1:D6", "bb1:31t.a", "gray", [ "v0" ] ],
+    [ "bb1:31t.e", "uno:3", "gray", [ "v249.6", "h96" ] ],
+    [ "lcd1:D7", "bb1:32t.a", "purple", [ "v0" ] ],
+    [ "bb1:32t.e", "uno:2", "purple", [ "v240", "h86.4" ] ]
+  ],
+  "dependencies": {}
+}

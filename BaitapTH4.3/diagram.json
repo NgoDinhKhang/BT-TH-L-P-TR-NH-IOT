@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Maverick",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard",
+      "id": "bb1",
+      "top": -89.4,
+      "left": -122,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -220.2, "left": 373.8, "attrs": {} },
+    { "type": "chip-LM35", "id": "chip1", "top": 337.02, "left": 331.2, "attrs": {} },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": -91.6, "left": -35.3, "attrs": {} }
+  ],
+  "connections": [
+    [ "sw1:1", "bb1:38b.j", "red", [ "v0" ] ],
+    [ "bb1:38b.f", "uno:5V", "red", [ "h0" ] ],
+    [ "sw1:2", "bb1:28b.j", "green", [ "v0" ] ],
+    [ "bb1:28b.f", "uno:8", "green", [ "h145.2", "v-222.4", "h211.2" ] ],
+    [ "sw1:3", "bb1:27b.j", "black", [ "v0" ] ],
+    [ "bb1:27b.f", "uno:GND.1", "black", [ "h126", "v-232", "h172.8" ] ]
+  ],
+  "dependencies": {}
+}
